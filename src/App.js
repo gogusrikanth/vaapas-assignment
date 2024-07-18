@@ -30,7 +30,6 @@ class App extends Component {
         `https://openlibrary.org/search.json?q=${query}`,
       )
       const data = await response.json()
-      console.log(data) // Log the response
       this.setState({movies: data.docs, loading: false})
     } catch (err) {
       this.setState({
